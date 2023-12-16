@@ -212,26 +212,26 @@ IPolicyServiceRepository policyServiceRepository = new PolicyServiceRepository()
 #endregion
 
 #region Delete Policy
-//try
-//{
-//    Console.Write("Enter Policy ID to delete ");
-//    if (int.TryParse(Console.ReadLine(), out int policyId))
-//    {
+try
+{
+    Console.Write("Enter Policy ID to delete ");
+    if (int.TryParse(Console.ReadLine(), out int policyId))
+    {
 
 
-//        bool isPolicyDeleted = policyServiceRepository.DeletePolicy(policyId);
+        bool isPolicyDeleted = policyServiceRepository.DeletePolicy(policyId);
 
-//        if (isPolicyDeleted)
-//        {
-//            Console.WriteLine("Policy deleted successfully.");
+        if (isPolicyDeleted)
+        {
+            Console.WriteLine("Policy deleted successfully.");
 
-//        }
-//    }
-//}
-//catch (PolicyNumberNotFoundException ex)
-//{
-//    Console.WriteLine($"Policy Number Not Found: {ex.PolicyNumber}");
-//}
+        }
+    }
+}
+catch (PolicyNumberNotFoundException ex)
+{
+    Console.WriteLine($"Policy Number Not Found: {ex.PolicyNumber}");
+}
 
 
 #endregion
